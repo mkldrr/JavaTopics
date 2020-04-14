@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class PrimeNumber {
 
-
-
 //    Prime numbers are divisible only by the number 1 or itself.
 //
 //    For example, 2, 3, 5, 7 and 11 are the first few prime numbers.
