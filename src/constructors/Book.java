@@ -9,7 +9,7 @@ public class Book {
     String title;
 
 
-      Book(int page,String author,String title){
+     public Book(int page,String author,String title){
 
         if (page>100 && author.length()>10&& title.length()>20){
                    this.page=page;
