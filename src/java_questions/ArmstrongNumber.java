@@ -15,14 +15,6 @@ public class ArmstrongNumber {
 
 
 
-
-
-
-
-
-
-
-
 //Todo    Create a method that will accept a number (int). Return a boolean: true if the given number is an Armstrong number
 //    or false if it is not — Armstrong number is a number that will take each digit of the number and raise it to the power of the number’s length.
 //    Then the results of each operation will be added together. The final result of all the operations will be equal to
