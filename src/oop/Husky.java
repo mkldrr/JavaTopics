@@ -1,18 +1,18 @@
 package oop;
 
-public class Huskey extends Dog {
+public class Husky extends Dog {
 
 
 
     String furType;
-    public Huskey (){
+    public Husky(){
         this.furType="Colden";
     }
     public void liveInCold() {
         System.out.println("Huskey is living in the cold weather");
     }
     public static void main(String[] args) {
-        Huskey huskey=new Huskey();
+        Husky huskey=new Husky();
         huskey.furType="GoldfurType";
         huskey.liveInCold();
         huskey.name="BKJHKJ";
