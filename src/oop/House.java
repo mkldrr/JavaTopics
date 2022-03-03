@@ -4,6 +4,8 @@ package oop;
 
 public  class House implements Wifi,Gas{
 
+    String typeOfModem ="xfinitsdhvbshdvcj";
+
 
     @Override
     public void gasOnOrOff() {
@@ -29,6 +31,17 @@ public  class House implements Wifi,Gas{
     @Override
     public void geAlt() {
         System.out.println("This is getAlt from house");
+    }
+
+    @Override
+    public void print() {
+        System.out.println(typeOfModem);
+    }
+
+    public static void main(String[] args) {
+        Wifi wifi= new House();
+
+        wifi.print();
     }
 
 

@@ -10,6 +10,7 @@ public class Computer {
     String memory;
 
 
+
     public  void info(){
 
         System.out.println("color : "+ color+ " model "+ model+ " price "+ price+ " Memory :"+ memory);

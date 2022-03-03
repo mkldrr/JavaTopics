@@ -35,7 +35,16 @@ public class ArrayPractice {
 // — return char
 
 
+    public static void main(String[] args) {
 
+
+
+
+
+
+
+
+    }
 
 
 }

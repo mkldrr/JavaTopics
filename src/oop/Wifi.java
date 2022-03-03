@@ -24,6 +24,7 @@ public interface Wifi {
     public default void geAlt(){ // it should have a body
         System.out.println(" deafault method");
     }
+    void print ();
 
 
 
