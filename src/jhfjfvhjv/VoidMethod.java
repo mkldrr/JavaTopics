@@ -1,4 +1,4 @@
-package methods;
+package jhfjfvhjv;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -93,8 +93,6 @@ public class VoidMethod {
 //        but if the second String is not in the first String:  ask the user to enter another String to try again.
 
     public static void stringContains(String str1,String str2) {
-
-
         if (str1.contains(str2)) {
             str1 = str1.replace(str2, "mkl");
             System.out.println(str1.trim());
@@ -108,7 +106,6 @@ public class VoidMethod {
             } else {
                 System.out.println("Out of tries");
             }
-
         }
     }
 

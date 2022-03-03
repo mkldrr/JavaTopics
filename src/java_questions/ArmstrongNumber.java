@@ -24,15 +24,15 @@ public class ArmstrongNumber {
 //  > input: 153 1^3 + 5^3 + 3 ^ 3 -> 1 + 125 + 27 = 153 > output: true
 
 
-
     public static boolean isArmstrong(int num ){
 
         String number= num+"";
-        int sum = 0;
         int power = number.length();
+        int sum = 0;
         for (int i = 0; i <power ; i++) {
-            int digit = Integer.parseInt(number.charAt(i)+"");
-            sum+= Math.pow(digit,power); //);//(digit*power)  + (digit*power)+ (digit*power);
+            int digit = Integer.parseInt(String.valueOf(number.charAt(i)));
+            sum+= Math.pow(digit,power); //);//(digit*power)//  + (digit*power)    +    (digit*power);
+
         }
         return sum==num;
 

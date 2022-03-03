@@ -26,7 +26,7 @@ public class Arraylist {
 
         //3 contains method : is returns true if the element in this list ,otherwise retuns false
         System.out.println(list.contains(90)+ " :contains method");
-        //4.indexOf method: acepts object element ,returns the index of the first  occurence of the elelment inthis list
+        //4.indexOf method: accepts object element ,returns the index of the first  occurence of the elelment inthis list
 
         System.out.println(list.indexOf(90)+ "  : indexOf method");
 
