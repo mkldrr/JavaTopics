@@ -13,7 +13,7 @@ public class Questions {
 
     public static void main(String[] args) {
 
-        int[] arr = {1000, 343,493, 1200, 475, 48, 1000, 769, 1, 3, 22, 44, 12, 30, 32, 1000, 54, 31};
+        int[] arr = {1000, 1000, 343, 343, 493, 1000, 200,44, 475, 475, 48, 48, 1000, 769, 1, 3, 1, 3, 22, 22, 44, 12, 12, 30, 32, 1000, 54, 30, 30};
         String str = "Mikail";
 
 
@@ -27,17 +27,17 @@ public class Questions {
         //  swapStrings("apple", "banana");
 
 
-       // System.out.println(evenNum(arr));
+        // System.out.println(evenNum(arr));
 
-       // System.out.println(oddNumsMap(arr));
+        // System.out.println(oddNumsMap(arr));
 
         //System.out.println(sumOfDigits(str));
 
         //occurrenceOfLetters(str);
 
+        // System.out.println(fibonacci7(47));
 
-
-        System.out.println( fibonacci6(10));
+        System.out.println(removedDuplicates(arr));
 
     }
 
@@ -246,25 +246,22 @@ public class Questions {
     //TODO Create a method which will Find the odd numbers from array and put them in the map one by one  and return as a map type
 
 
-    public static HashMap<Integer, Integer> oddNumsMap(int [] arr){
-
+    public static HashMap<Integer, Integer> oddNumsMap(int[] arr) {
 
 
         HashMap<Integer, Integer> oddNumsMap = new HashMap<>();  //int[] arr = {1000, 343,493, 1200, 475, 48, 1000, 769, 1, 3, 22, 44, 12, 30, 32, 1000, 54, 31};
 
-        for (int i = 0; i <arr.length ; i++) {
+        for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i]%2==1){
+            if (arr[i] % 2 == 1) {
 
-                oddNumsMap.put(i,arr[i]);
+                oddNumsMap.put(i, arr[i]);
             }
 
         }
 
         return oddNumsMap;
     }
-
-
 
 
     //TODO ================================================================================================================
@@ -280,43 +277,38 @@ public class Questions {
 //    abrakadabra =  has 1 times d
 
 
-    public  static void occurrenceOfLetters(String sentence){
+    public static void occurrenceOfLetters(String sentence) {
 
 
-                                                                        //   abrakadabr
+        //   abrakadabr
 
-        String checked="";
-        int count=0;
-        for (int i = 0; i <sentence.length() ; i++) {                  // 1.loop   i [ 0 > a ]  i [ 1 > b ] ...  i [ 3 > a ]
+        String checked = "";
+        int count = 0;
+        for (int i = 0; i < sentence.length(); i++) {                  // 1.loop   i [ 0 > a ]  i [ 1 > b ] ...  i [ 3 > a ]
 
-            if (!checked.contains(sentence.charAt(i)+"")){
-                                                                    //   abrakadabr
+            if (!checked.contains(sentence.charAt(i) + "")) {
+                //   abrakadabr
 
-                for (int j = 0; j <sentence.length() ; j++) {           //.2 loop :  j [ 0 > a  ], [ 1 > b  ] [ 2 > r  ] [ 3 > a  ]
-                    if (sentence.charAt(i)==sentence.charAt(j)){
+                for (int j = 0; j < sentence.length(); j++) {           //.2 loop :  j [ 0 > a  ], [ 1 > b  ] [ 2 > r  ] [ 3 > a  ]
+                    if (sentence.charAt(i) == sentence.charAt(j)) {
                         count++;   // 1+1
                     }
                 }
-                checked+= sentence.charAt(i)+" ";  // checked a b
+                checked += sentence.charAt(i) + " ";  // checked a b
 
 
-                System.out.println(sentence + " =  has " + count + " times " + sentence.charAt(i) );
-                count=0;
+                System.out.println(sentence + " =  has " + count + " times " + sentence.charAt(i));
+                count = 0;
             }
         }
 
     }
 
 
-
-
-
-
-
     //Example 1
     public static void frequencyOfeachChar(String word) {
 
-        String nonRepeat ="";
+        String nonRepeat = "";
         String result = "";
 
         for (int i = 0; i < word.length(); i++) {
@@ -330,11 +322,11 @@ public class Questions {
             char eachCh = nonRepeat.charAt(i);
             int frequency = 0;
             for (int j = 0; j < word.length(); j++) {
-                if(word.charAt(j) == eachCh){
+                if (word.charAt(j) == eachCh) {
                     frequency++;
                 }
             }
-            result+="" + word + "= " + "has " + frequency + " times " + eachCh + "\n";
+            result += "" + word + "= " + "has " + frequency + " times " + eachCh + "\n";
         }
         System.out.println(result);
     }
@@ -342,7 +334,7 @@ public class Questions {
 
     //Example 2
 
-    public static HashMap<Character, Integer> occurrence(String str){
+    public static HashMap<Character, Integer> occurrence(String str) {
 
         HashMap<Character, Integer> map = new HashMap<>();
 
@@ -350,10 +342,10 @@ public class Questions {
 
         for (char eachChar : arr) {
 
-            if (map.containsKey(eachChar)){
-                map.put(eachChar, map.get(eachChar)+1);
-            }else {
-                map.put(eachChar,1);
+            if (map.containsKey(eachChar)) {
+                map.put(eachChar, map.get(eachChar) + 1);
+            } else {
+                map.put(eachChar, 1);
             }
         }
 
@@ -361,7 +353,7 @@ public class Questions {
     }
 
 
-    public static void  accourance2(String someString) {
+    public static void accourance2(String someString) {
         //String someString = "abrakadabra";
         int count = 0;
 
@@ -379,32 +371,7 @@ public class Questions {
         }
 
 
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //TODO    11 - Write a method that will accept a string and return sum of numbers in a string.
@@ -426,38 +393,33 @@ public class Questions {
     }
 
 
-
-
-
-
     //TODO  Create a method which will return a sting. This method will accept  int. You will need to find the fibonacci
     // numbers until the  [ int param] number iteration.
     // Limitation: Use only one loop.
 
 
+    public static String fibonacciNumbers(int num) {  // 10
 
-    public static String fibonacciNumbers(int num){  // 10
+        String fibonacciNumbers = "";
 
-        String fibonacciNumbers="";
-
-        int number1=0;
-        int number2=1;
-        int sum=0;
+        int number1 = 0;
+        int number2 = 1;
+        int sum = 0;
         //
 
 
-        for (int i = 0; i <num ; i++) { // i = 0,1,3,4,6, 7
+        for (int i = 0; i < num; i++) { // i = 0,1,3,4,6, 7
 
 
             // 0,1,1,2,3,5,8,13,....
 
-            fibonacciNumbers+=number1 + " "; //fib: 0, 1, 1, 2, 3, 5, .......
+            fibonacciNumbers += number1 + " "; //fib: 0, 1, 1, 2, 3, 5, .......
 
             //number1: 0,1, 2, 3,
 
-            sum= number1+number2; // 1,2,3,5,8
-            number1=number2; // num1: 1, 1, 2, 3, 5,
-            number2=sum;//num2: 1, 2, 3, 5,8
+            sum = number1 + number2; // 1,2,3,5,8
+            number1 = number2; // num1: 1, 1, 2, 3, 5,
+            number2 = sum;//num2: 1, 2, 3, 5,8
 
 
         }
@@ -465,24 +427,23 @@ public class Questions {
         return fibonacciNumbers;
 
 
-
     }
 
 
     //======================
 
-    public static String fibonacci(int num){
+    public static String fibonacci(int num) {
 
-        int num1=0;
-        int num2=1;
-        int sum=0;
+        int num1 = 0;
+        int num2 = 1;
+        int sum = 0;
 
-        String sequence = num1 +" "+ num2;
+        String sequence = num1 + " " + num2;
 
         for (int i = 2; i < num; i++) {
 
             sum = num1 + num2;
-            sequence += " "+sum;
+            sequence += " " + sum;
             num1 = num2;
             num2 = sum;
         }
@@ -492,10 +453,7 @@ public class Questions {
     }
 
 
-
-
     //=============
-
 
 
     public static String fibonacci2(int n) {
@@ -524,17 +482,16 @@ public class Questions {
     public static String fibonacci3(int num) {
         String result = "";
 
-        int [] nums = new int[num+1];
+        int[] nums = new int[num + 1];
         nums[0] = 0;
         nums[1] = 1;
-        System.out.print(nums[0]+" "+nums[1]+" ");
-        for(int i = 2; i < num; i++){
-            nums[i] = nums[i-2] + nums[i-1];
-            result += nums[i]+" ";
+        System.out.print(nums[0] + " " + nums[1] + " ");
+        for (int i = 2; i < num; i++) {
+            nums[i] = nums[i - 2] + nums[i - 1];
+            result += nums[i] + " ";
         }
         return result;
     }
-
 
 
     public static String fibonacci4(int n) {
@@ -580,11 +537,10 @@ public class Questions {
     }
 
 
-
     //====
 
     public static String fibonacci6(int n) {
-        String result="";
+        String result = "";
 
         int sum = 0;
         int prevNum = 1;
@@ -592,7 +548,7 @@ public class Questions {
 
 
         while (currentNum <= n) {
-            result+=""+currentNum+" ";
+            result += "" + currentNum + " ";
             sum = prevNum;
             prevNum = currentNum;
             currentNum = sum + prevNum;
@@ -604,18 +560,17 @@ public class Questions {
     //==
 
 
-
-    public static String fibonacci7(int givenNumber){
+    public static String fibonacci7(int givenNumber) {
         String finalResult = "";
 
         int num1 = 0;
-        int num2 =1;
+        int num2 = 1;
 
-        finalResult += num1+ " " + num2+" ";
+        finalResult += num1 + " " + num2 + " ";
 
-        for (int i = 2; i <givenNumber ; i++) {
+        for (int i = 2; i < givenNumber; i++) {
             int result = num1 + num2;
-            finalResult += result+" ";
+            finalResult += result + " ";
 
             num1 = num2;
             num2 = result;
@@ -624,17 +579,17 @@ public class Questions {
     }
 
 
-    public static String fibonacci8(int num){
+    public static String fibonacci8(int num) {
         String result = "";
 
         int num1 = 0;
-        int num2 =1;
+        int num2 = 1;
 
-        result += num1+ " " + num2+" ";
+        result += num1 + " " + num2 + " ";
 
-        for (int i = 2; i <num ; i++) {
+        for (int i = 2; i < num; i++) {
             int temp = num1 + num2;
-            result += temp+" ";
+            result += temp + " ";
 
             num1 = num2;
             num2 = temp;
@@ -644,16 +599,152 @@ public class Questions {
     }
 
 
-
-
-
-
     //TODO ================================================================================================================
-
 
 
     //TODO : Write method which will return an Integer ArrayList. This method should accept and int array. Please return the non-
     // duplicate numbers from the array
+
+
+    //---------
+    public static ArrayList<Integer> nonDup(int[] arr) {
+        ArrayList<Integer> finalVersion = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            int freq = 0;
+            int each = arr[i];
+            for (int j = 0; j < arr.length; j++) {
+                if (each == arr[j]) {
+                    freq++;
+                }
+            }
+            if (freq == 1) {
+                finalVersion.add(each);
+            }
+        }
+        return finalVersion;
+    }
+
+
+    public static ArrayList<Integer> nonDuplicate(int[] arr) {
+        ArrayList<Integer> finalVersion = new ArrayList<>();
+        List<Integer> non_Primitive = new ArrayList<>();//converting primitive int to non-primitive
+        for (int each : arr) {
+            non_Primitive.add(each);
+        }
+        for (int each : arr) {
+            if (Collections.frequency(non_Primitive, each) == 1) {
+                finalVersion.add(each);
+            }
+        }
+        return finalVersion;
+
+    }
+
+
+    //--------
+
+    public static ArrayList<Integer> removed(int [] arr) {
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+
+        for (int i = 0; i < arr.length; i++) {
+            int first = arr[i];
+            int count = 0;
+            for (int j = 0; j < arr.length; j++) {
+                int second = arr[j];
+                if (first == second) {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                list.add(arr[i]);
+            }
+        }
+        return list;
+    }
+
+
+
+    public static ArrayList<Integer> nonduplicates(int[] array) {
+        ArrayList<Integer> nonduplicates = new ArrayList<>();
+
+        for (int i = 0; i < array.length; i++) {
+            int frequency=0;
+
+            for (int j = 0; j < array.length; j++) {
+                if(array[i]==array[j])
+                    frequency++;
+            }
+            if(!nonduplicates.contains(array[i])){
+                if(frequency==1)
+                    nonduplicates.add(array[i]);
+            }
+        }
+        return nonduplicates;
+    }
+
+
+    //------
+
+    public static ArrayList<Integer> nonDuplicates(int[] array){
+        ArrayList<Integer> list=new ArrayList<>();
+        for (int each : array) {
+            int count=0;
+            for (int i = 0; i < array.length; i++) {
+                if(each==array[i]){
+                    count++;
+                }
+            }
+            if(count==1){
+                list.add(each);
+            }
+        }
+        return list;
+    }
+
+
+    public static ArrayList<Integer> returnNonDuplicates(int[] arr) {
+
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int each : arr) {
+            int count = 0;
+            for (int element : arr) {
+                if(element==each){
+                    count++;
+                }
+            }
+            if(count==1){
+                list.add(each);
+            }
+        }
+        return list;
+    }
+
+
+    //----------
+
+    public static ArrayList<Integer> removedDuplicates(int[] array) {
+
+
+        ArrayList<Integer> unique = new ArrayList<>();
+
+        for (int i = 0; i < array.length; i++) {
+            int count = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    count++;
+                }
+            }
+
+            if (count == 1) {
+                unique.add(array[i]);
+            }
+        }
+        return unique;
+
+    }
+
 
 
 
