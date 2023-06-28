@@ -1,7 +1,55 @@
 package static_members;
 
+import javax.imageio.stream.ImageInputStream;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
 
+
+
+
+
+
+
+    public static void main(String[] args) {
+
+        ArrayList <Integer> list = new ArrayList<>();
+
+
+        List list1 = new ArrayList<>();
+
+
+        list.add(3);
+        list.add(65);
+
+
+
+         String [] str = {"",""};
+
+
+
+
+
+
+
+
+    }
+
+
+    public Car(boolean tiers ){
+
+
+
+    }
+
+    public Car( ){
+
+
+
+    }
+    Car car = new Car();
 
     static long price;
     static String model;
@@ -22,7 +70,7 @@ public class Car {
         System.out.println("This is static block it is gonna print first!");
     }
 
-    public static void info(){
+    public    void info(){
 
         System.out.println("price :"+ price);
         System.out.println("model  :"+ model);

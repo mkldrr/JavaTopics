@@ -5,13 +5,13 @@ public class SumOfDigits {
 
 
 //    11 - Write a method that will accept a string and return sum of numbers in a string.
-//    Input: "I5 a3m an Soft9ware 2 Develop3er in Test" output: 5 + 3 + 9 + 2 + 3 = 22 (Got this question in Here)
+//    Input: "I5 a3m an Soft9ware 2 Develop3er in wrapper_classes.Test" output: 5 + 3 + 9 + 2 + 3 = 22 (Got this question in Here)
 
 
     public static void main(String[] args) {
 
 
-        String sentence= "I5 a3m an Soft9ware 2 Develop3er in Test";
+        String sentence= "I5 a3m an Soft9ware 2 Develop3er in wrapper_classes.Test";
         System.out.println(sumOfDigits(sentence));
 
 

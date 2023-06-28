@@ -15,10 +15,10 @@ public interface Wifi {
 //            —all variables are public static final. They have to be initialized.
 //—           because final variables, it is better to make capital.
 //           Methods can be private after java 9
-    final static boolean wifiTurnOn= true;
+     static boolean wifiTurnOn = false;
     final static String typeOfModem ="xfinity";
     public abstract void turnWifiOforTurnOn();//ist by dafault public abstract
-    public static void fiveG(){ //it should have a body because it is static
+    public  static void fiveG(){ //it should have a body because it is static
         System.out.println("This is static method in interface");
     }
     public default void geAlt(){ // it should have a body

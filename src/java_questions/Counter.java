@@ -7,6 +7,9 @@ public class Counter {
         String name = "Maiachaaelak";
         System.out.println(countChar(name));
     }
+
+
+
     public static int countChar(String str){
         int count =0;
         boolean check = false;

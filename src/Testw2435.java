@@ -1,8 +1,16 @@
+import mentoring.b27_group7.Practice;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Date;
 
-public class Testw2435 {
+public class Testw2435 extends Practice {
+
+
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -12,7 +20,7 @@ public class Testw2435 {
 //        }
 //
 //
-//        System.out.println(Arrays.toString(charArr("java Test")));
+//        System.out.println(Arrays.toString(charArr("java wrapper_classes.Test")));
 //
 //
 //
@@ -26,10 +34,28 @@ public class Testw2435 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 
 
-
+      
 
 
 

@@ -1,6 +1,12 @@
 package access_modifiers;
 
-public class AccessModifiers {
+import arraylist.Arraylist;
+
+public class AccessModifiers  {
+
+
+
+    protected static int num =0;
 //
 //    Access Modifiers
 //    Java  uses access modifier concept to give proper access to determine the scope of the variables, methods and classes.

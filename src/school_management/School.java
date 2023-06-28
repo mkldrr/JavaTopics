@@ -5,13 +5,15 @@ import java.util.List;
 public class School {
 
 
+
+
     private List<Teachers> teachers;
     private List<Students> students;
     private static int totalMoneyEarned;
     private static int totalMoneySpent;
 
 
-    public School(List<Teachers> teachers, List<Students> students) {
+     public School(List<Teachers> teachers, List<Students> students) {
         this.teachers = teachers;
         this.students = students;
         totalMoneyEarned=0;
@@ -41,7 +43,8 @@ public class School {
         return totalMoneyEarned;
     }
 
-    public static  void updateTotalMoneyEarned(int moneyEarned) {
+    public static  void updateTotalMoneyEarned(
+            int moneyEarned) {
         totalMoneyEarned += moneyEarned;
     }
 
@@ -51,5 +54,11 @@ public class School {
 
     public static void updateTotalMoneySpent(int moneySpent) {
         totalMoneyEarned -= moneySpent;
+    }
+
+
+
+    static{
+
     }
 }

@@ -1,8 +1,11 @@
 package arraylist;
 
+import access_modifiers.AccessModifiers;
+import mentoring.A;
+
 import java.util.ArrayList;
 
-public class Arraylist {
+public class Arraylist extends AccessModifiers {
 
     public static void main(String[] args) {
 
@@ -44,6 +47,13 @@ public class Arraylist {
         list.clear();
         System.out.println(list);
         System.out.println(list.isEmpty());
+
+        AccessModifiers accessModifiers = new AccessModifiers();
+
+
+
+
+
 
 
 

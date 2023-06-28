@@ -2,6 +2,8 @@ package oop;
 
 import java.util.Scanner;
 
+
+
 public class Encapsulation {
 
 
@@ -15,6 +17,27 @@ public class Encapsulation {
     //make variables private,and provide public method for this private variables to get and set methods
     private String userName;
     private String password;
+    private int num=0;
+
+
+    public static void main(String[] args) {
+
+
+        int  [][] arr =
+
+                {       {    1,0,1,0,0       },
+                        {    1,1,1,0,1       },
+                        {    0,0,0,1,1       },
+                        {    1,0,1,0,0       },
+                        {    1,0,1,0,1       }       };
+
+
+
+
+
+
+
+    }
 
 
     public String getUserName() {
