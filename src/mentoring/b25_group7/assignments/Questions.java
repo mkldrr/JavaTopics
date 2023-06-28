@@ -1,5 +1,6 @@
 package mentoring.b25_group7.assignments;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Questions {
@@ -13,31 +14,30 @@ public class Questions {
 
     public static void main(String[] args) {
 
-        int[] arr = {1000, 1000, 343, 343, 493, 1000, 200,44, 475, 475, 48, 48, 1000, 769, 1, 3, 1, 3, 22, 22, 44, 12, 12, 30, 32, 1000, 54, 30, 30};
-        String str = "Mikail";
-
-
+        int[] arr = {4,6,6,9,8,8};
+        String str = "Mikail is";
+        str.toLowerCase();
+        String [] arr2 =str.split("not");
+        //System.out.println(Arrays.toString(arr2));
         // System.out.println( " Second max is:   "+   secondMax(arr));
         // secondMax1(arr);
-
         //System.out.println(findSecHigh(arr));
-
         // swap(76,50);
-
         //  swapStrings("apple", "banana");
-
-
         // System.out.println(evenNum(arr));
-
         // System.out.println(oddNumsMap(arr));
-
         //System.out.println(sumOfDigits(str));
-
         //occurrenceOfLetters(str);
-
         // System.out.println(fibonacci7(47));
+        // System.out.println(removedDuplicates(arr));
 
-        System.out.println(removedDuplicates(arr));
+      //   occurrenceOfLetters ("Mikail is a great mentor");
+        System.out.println(fibonacciNumbers(21));
+
+
+
+
+
 
     }
 
@@ -155,8 +155,8 @@ public class Questions {
 // int a = 3
 // int b = 5
 
-// num will become 5;
-// num2 will become 3;
+// a will become 5;
+// b will become 3;
 
 
     public static void swap(int a, int b) {
@@ -200,8 +200,8 @@ public class Questions {
 //TODO ================================================================================================================
 
 
-    //TODO: Create a method which will return an  Integer ArrayList. The method will accept an int array parameter.
-    // Return every even number which are in the Array.
+    //TODO: Create 2 methods which will return an  Integer ArrayList. The methods will accept an int array parameter.
+    // One method will return every even number from the given int Array and one method will return odd numbers every from the given int array
 
 
     public static ArrayList<Integer> evenNum(int[] arr) {   // [ 4.6.8.3.9.3.9.4.2     ]
@@ -267,7 +267,8 @@ public class Questions {
     //TODO ================================================================================================================
 
 
-    //TODO Occurrences of letters in a string "dfnvdfjkvndfknvkjdfnvkdfnv" : Create  void method which will accept a string " abrakadabra". Please find the how many
+    //TODO Occurrences of letters in a string "abrakadabra" : Create  void method which will accept a string " abrakadabra".
+    // Please find the how many
     // times each letter occurs/dispay in the string and print in the following format:
 
 //    abrakadabra =  has 5 times a
@@ -394,8 +395,8 @@ public class Questions {
 
 
     //TODO  Create a method which will return a sting. This method will accept  int. You will need to find the fibonacci
-    // numbers until the  [ int param] number iteration.
-    // Limitation: Use only one loop.
+    // numbers until the given  [ int param ] number iteration.
+    // Limitation: Use only one loop. // exp: input 21 , output: 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765
 
 
     public static String fibonacciNumbers(int num) {  // 10
@@ -601,9 +602,8 @@ public class Questions {
 
     //TODO ================================================================================================================
 
-
     //TODO : Write method which will return an Integer ArrayList. This method should accept and int array. Please return the non-
-    // duplicate numbers from the array
+    // duplicate numbers as a list from the given array param.
 
 
     //---------
@@ -724,13 +724,13 @@ public class Questions {
 
     //----------
 
-    public static ArrayList<Integer> removedDuplicates(int[] array) {
+    public static ArrayList<Integer> removedDuplicates(int[] array) {   // [1,3,7,1,3,9];
 
 
         ArrayList<Integer> unique = new ArrayList<>();
 
         for (int i = 0; i < array.length; i++) {
-            int count = 0;
+            int count = 0; // 0
             for (int j = 0; j < array.length; j++) {
                 if (array[i] == array[j]) {
                     count++;
@@ -745,8 +745,103 @@ public class Questions {
 
     }
 
+    //--
 
 
+    public static ArrayList<Integer> returnNonDup(int [] arr){ // [1,3,7,1,3,9];
+
+        ArrayList<Integer> uniques = new ArrayList<>();
+
+
+        for (int i = 0; i <arr.length ; i++) {    // i > index 0,.2...                 [1,3 , 7
+
+            boolean check = true;         // true
+
+            for (int j = 0; j <arr.length ; j++) {   // j > index 0, 1,2, [ 1,3,7
+
+                if (arr[i] == arr[j] && i != j){
+
+                    check = false;
+                }
+
+            }
+            //===========
+            if (check) uniques.add(arr[i]);
+        }
+
+        return uniques;
+    }
+
+
+
+
+
+
+
+
+
+
+    public static ArrayList<Integer> non_D(int [] array) {
+
+
+        ArrayList<Integer> nonD = new ArrayList<>();
+        for (int i = 0; i < array.length; i++) {
+            int count = 0;
+            for (int each : array) {
+                if (each == array[i]) {
+                    count++;
+                }
+            }
+
+            if (count == 1) {
+
+                //System.out.println(array[i]);
+                nonD.add(array[i]);
+
+
+            }
+        }
+        return nonD;
+
+    }
+
+
+
+        public static List<Integer> square (List<Integer> nums) {
+
+
+            nums.replaceAll(n -> n*n);
+
+            // for (int i=0; i< nums.size(); i++ ){
+
+            //   nums.set(i, nums.get(i)*nums.get(i) );
+
+            // }
+            return nums;
+
+
+        }
+
+
+    public static ArrayList<Integer> removeDuplicateNum(ArrayList<Integer> nums) {
+        ArrayList<Integer> result = new ArrayList<>();
+        for (int each : nums) {
+            int count = 0;
+            for (int i = 0; i < nums.size(); i++) {
+                if (each == nums.get(i)) {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                result.add(each);
+            }
+        }
+        return result;
+    }
+
+
+
+    //TODO==================================================================================================
 
 
 
@@ -755,5 +850,21 @@ public class Questions {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

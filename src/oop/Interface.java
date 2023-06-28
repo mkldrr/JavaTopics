@@ -1,6 +1,17 @@
 package oop;
 
-public class Interface {
+public class Interface extends Test2 {
+
+
+    @Override
+    void login() {
+
+    }
+
+    @Override
+    void login(String username, String password) {
+
+    }
 
     //    They act like a class, and they can have variables.
 //    Is one of the way to do abstraction.
@@ -23,6 +34,8 @@ public class Interface {
 //            *Using Interface  with other classes
 //
 //    Keyword: implements should be used
+
+
 
 
 

@@ -9,7 +9,7 @@ import java.util.Map;
 public class NonDuplicates {
     public static void main(String[] args) {
         int [ ] arr = {2,43,5,2,6,22,1,43,5};
-        System.out.println(uniques(arr));
+        System.out.println(returnNonDuplicates(arr));
     }
     public static ArrayList<Integer> uniques(int [] arr){
         ArrayList<Integer> listOfUniqueNumbers= new ArrayList<>();//we will return arrayList
@@ -26,7 +26,7 @@ public class NonDuplicates {
         }
        return listOfUniqueNumbers;
     }
-    public static ArrayList<Integer> printNonDuplicates(int[] arr) {
+    public static ArrayList<Integer> returnNonDuplicates(int[] arr) {
         ArrayList<Integer> listOfUniqueNumber = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {      ///2,7 43,5,2,6,22,1,43,5   : 7
             boolean check = true;

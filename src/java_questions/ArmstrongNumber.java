@@ -1,10 +1,17 @@
 package java_questions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArmstrongNumber {
 
     public static void main(String[] args) {
 
         System.out.println(isArmstrong(1553));
+
+
+        List<Integer> list = new ArrayList<>();
+
 
 
 

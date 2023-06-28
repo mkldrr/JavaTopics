@@ -22,9 +22,9 @@ public class FindSecondMaxNumber {
 
 
 
-//    5-) Find Second Max Number
-//    Create a method that will accept an int array. Return the number which is the second to biggest number./
-//            ** Do not use sort method *   Ex:     > input: 1,3,22,44,12,30,32,54,31 > output: 44
+//    TODO Find Second Max Number
+//     Create a method that will accept an int array. Your method will return int. Return the number which is the second to biggest number./
+//     ** Do not use sort method *   Ex:     > input: 1,3,22,44,12,30,32,54,31 > output: 44
 
 
 
@@ -49,10 +49,6 @@ public class FindSecondMaxNumber {
 
 
         return secondMax;
-
-
-
-
 
     }
 

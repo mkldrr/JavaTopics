@@ -6,7 +6,7 @@ public class OccurrenceOfLetters {
 
     public static void main(String[] args) {
 
-        String sentence= "abrakadabra";
+        String sentence= "abracadabra";
 
         occurrenceOfLetters(sentence);
 
@@ -19,6 +19,17 @@ public class OccurrenceOfLetters {
     }
 
 
+
+
+
+    // TODO Create one void type method. This method will have one String param. Pls return occurrence of letters from the given string as following format:
+    // Given String param: "abracadabra"
+    //print as
+    //abracadabra =  has 5 times a
+    //abracadabra =  has 2 times b
+    //abracadabra =  has 2 times r
+    //abracadabra =  has 1 times c
+    //abracadabra =  has 1 times d
 
 
 
